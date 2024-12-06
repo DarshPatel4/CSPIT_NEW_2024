@@ -555,6 +555,71 @@
 .rating i {
     color: var(--primary-color);
 }
+
+.background-container {
+  position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('images1/background.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center; /* Vertically center the text */
+            justify-content: flex-end; /* Align text to the right */
+            padding-right: 50px; /* Add spacing from the right edge */
+            color: #959494; /* Dark text for readability */
+            
+        }
+
+        .heading {
+            position: absolute;
+            top: 20px; /* Adjust spacing from the top */
+            left: 30px;
+            width: 100%;
+            text-align: center;
+            color: #000000;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .text-content {
+            max-width: 600px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0); /* Fully transparent background */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+            animation: fadeIn 1s ease-in-out;
+            border-radius: 18px;
+
+        }
+
+        .text-content p {
+            font-size: 1.1rem;
+            color: #ffffff; /* White text color for visibility */
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        
+
     </style>
 
     <link
@@ -574,9 +639,9 @@
 
     
     <header>
-        <h1>About CSPIT</h1>
+        <h1 style="color: #000000;">About CSPIT</h1>
     </header>
-    <div class="container">
+    <!-- <div class="container">
         <div class="about-section">
             <img src="images1/background.jpg" alt="CSPIT Campus">
             <div class="about-content">
@@ -591,10 +656,26 @@
                 </p>
             </div>
         </div>
+    </div> -->
+
+
+ <div class="background-container">
+        <h2 class="heading">CSPIT Information</h2>
+        <div class="text-content">
+            <p>
+                Chandubhai S Patel Institute of Technology (CSPIT), is the first institute established in the year 2000 at Education Campus, Changa (now CHARUSAT).
+                The institute is managed through a think tank of academicians, scientists, engineers, and professionals from all parts of the world.
+            </p>
+            <p>
+                Started with 240 seats with four Bachelor Degree Engineering Programs in the year 2000, the institute now has a total intake of 600 seats
+                in 8 programs of Bachelor Degree, 63 seats of Post Graduate Degree, and a Doctor of Philosophy (Ph.D.) program.
+            </p>
+        </div>
     </div>
 
 
-    <section class="about fullheight align-items-center" id="about">
+
+    <!-- <section class="about fullheight align-items-center" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-7 h-xs">
@@ -618,7 +699,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+
+
+
+    
 
     <section id="testimonial">
         <div class="container" style="margin: 50px auto;">
