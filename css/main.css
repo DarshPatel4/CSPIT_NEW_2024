@@ -1074,6 +1074,8 @@ img {
 .courses__cont--item img {
   width: 100%;
   object-fit: cover;
+  padding: 2px;
+  border-radius: 15px;
 }
 
 @media (max-width: 768px) {
@@ -1329,7 +1331,8 @@ img {
   width: 200px;
   /* height: 200px; */
   object-fit: cover;
-  border-radius: 8px;
+  padding: 5px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 2px solid #0056b3;
 }
@@ -4288,39 +4291,8 @@ div.error_form {
     min-height: 560px;
   }
 }
-/*
-@media  (max-width: 768px) {
-    #homeTopSlider .owl-nav{
-        display: block;
-    }
-    #homeTopSlider .owl-nav button.owl-prev{
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translate(0, -50%);
-        border: 2px solid white;
-        width: 35px;
-        height: 35px;
-        color: white;
-        border-radius: 0px;
-        z-index: 1111;
-        background: #04040445;
-    }
-    #homeTopSlider .owl-nav button.owl-next{
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translate(0, -50%);
-        border: 2px solid white;
-        width: 35px;
-        height: 35px;
-        color: white;
-        border-radius: 0px;
-        z-index: 1111;
-        background: #04040445;
-    }
-}
-*/
+
+
 @media (min-width: 769px) {
   #homeTopSlider .item video {
     min-height: 100vh;
