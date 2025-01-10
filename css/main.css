@@ -149,7 +149,7 @@ input[type="submit"] {
 .section-intro {
   padding: 4% 8%;
   width: 100vw;
-  background-image: url(".././images1/about-us-bg.jpg");
+  background-image: url(".././images1/about-us-bg.webp");
   background-size: cover;
 }
 
@@ -396,20 +396,60 @@ img {
   cursor: pointer;
 }
 
-.student-small-card:hover::after {
-  content: "";
+.student-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+
+.project-hover-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0); /* Initially transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
-  /* border: #151515 7px solid;   */
-  border: #e4ba14 7px solid;  
+  transition: background 0.3s ease;
   border-radius: 5%;
+  
 }
 
+.project-hover-text {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+.project-hover-text a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #e4ba14;
+  border-radius: 5px;
+}
+
+.project-hover-text a:hover {
+  background: #e4ba14;
+  color: #151515;
+}
+
+.student-small-card:hover .project-hover-overlay {
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay on hover */
+  border: 7px solid #e4ba14;
+}
+
+.student-small-card:hover .project-hover-text {
+  opacity: 1; /* Show "Click Here" text */
+}
 
 /* Spacing adjustments for rows */
 
@@ -1210,21 +1250,20 @@ img {
     max-height: 90%;
   }
 }
-.club-section .courses__cont--item{
+.club-section .courses__cont--item {
   transition: transform 0.4s ease, border 0.3s ease;
-} 
-.club-section .courses__cont--item img{
+  cursor: pointer;
+  position: relative; /* Added for hover effect overlay */
+  overflow: hidden; /* Ensures the scaling image doesn't overflow */
+}
+
+.club-section .courses__cont--item img {
   transition: transform 0.3s ease;
-} 
+}
+
 .club-section .courses__cont--item:hover {
   transform: scale(1.2); /* Popup effect */
-  /* border: 7px solid #151515; */
-  border: #e4ba14 7px solid;  
-}
-.club-section .courses__cont--item {
-  /* position: relative; */
-  /* overflow: hidden; */
-  cursor: pointer;
+  border: #e4ba14 7px solid;
 }
 
 .club-section .courses__cont--item:hover::after {
@@ -1234,15 +1273,42 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.9); /* Darker overlay */
   z-index: 1;
-  pointer-events: none; 
+  pointer-events: none;
+  transition: background 0.3s ease; /* Smooth overlay transition */
 }
-
 
 .club-section .courses__cont--item:hover img {
-  transform: scale(1.05); 
+  transform: scale(1.2); /* Slight scale-up effect */
 }
+
+/* Hover Text Styling */
+.club-section .courses__cont--item .hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  padding: 10px 20px;
+  white-space: normal; /* Enables text wrapping */
+  text-align: center; /* Centers the text */
+  max-width: 90%; /* Sets a maximum width for the text */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.club-section .courses__cont--item:hover .hover-text {
+  opacity: 1;
+  transform: translate(-50%, -45%);
+}
+
+
 
 /* POPUP FOR STUDENTS CLUB--------------------------- */
 /* General Popup Styles */
@@ -1572,6 +1638,44 @@ hr {
     font-size: 0.8rem; /* Smaller font size for links */
   }
 }
+/* Ensure list pointers (bullets) are shown */
+.custom-modal-links {
+  list-style-type: circle; /* Or 'disc', 'square', etc. */
+  padding-left: 20px; /* Add padding for proper alignment */
+}
+
+.custom-modal-links li {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  list-style-type: inherit; /* Use the style defined for the parent */
+}
+
+.department-name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  margin-right: 10px; /* Space between the text and the links */
+}
+
+.department-links {
+  display: flex;
+  gap: 10px; /* Even spacing between links */
+}
+
+.department-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.department-links a:hover {
+  color: #0056b3;
+}
+
+
+
+
 
 /* ----------------------Student Club --------------------------- */
 /* .club-section {
@@ -1811,6 +1915,60 @@ section#thrust-areas {
   transition: 0.3s;
   border: none !important;
 }
+.gallery-section h2 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.stacked-cards {
+  position: relative;
+  width: 380px;
+  height: 300px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.stacked-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  transition: transform 0.3s ease-in-out;
+}
+
+.stacked-cards:hover .stacked-card:nth-child(1) {
+  transform: rotate(-21deg) translateY(-40px) translateX(20px);
+  z-index: 1;
+}
+
+.stacked-cards:hover .stacked-card:nth-child(2) {
+  transform: rotate(-7deg) translateY(-20px) translateX(10px);
+  z-index: 2;
+}
+
+.stacked-cards:hover .stacked-card:nth-child(3) {
+  /* transform: rotate(5deg); */
+  z-index: 3;
+}
+
+.stacked-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stacked-caption {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 
 .gallery-nav-pills .gallery-nav-link:hover {
   background-color: #0057b334;
@@ -1835,7 +1993,7 @@ section#thrust-areas {
 }
 .gallery-card img {
   width: 100%;
-  height: 300px;
+  height: 350px;
   object-fit: cover;
   transition: all 0.3s ease;
 }
@@ -2232,7 +2390,7 @@ section#thrust-areas {
 .testimonials-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  gap: 25px; /* Spacing between cards */
+  gap: 22px; /* Spacing between cards */
 }
 
 .testimonial-card {
@@ -2319,6 +2477,7 @@ section#thrust-areas {
 .testimonials-section .testimonial-card .testimonial-card-info .testimonial-card-paragraph {
   font-size: 1rem;
   color: #333;
+  text-align: justify;
 }
 
 /* RESPONSIVENESS */
@@ -2755,7 +2914,7 @@ ul li {
 
 .navbar-brand a {
   color: white;
-  line-height: 160px;
+  /* line-height: 500px; */
 }
 
 .navbar-toggler:active,
