@@ -218,7 +218,7 @@
                   </a>
                 </li>
                 <li class>
-                  <a class="nav-link py-0 px-4 top-link" href="comingsoon.html" target="_blank">
+                  <a class="nav-link py-0 px-4 top-link" href="https://charusat.ac.in/cspit/book1/ " target="_blank">
                     Newsletter
                   </a>
                 </li>
@@ -228,7 +228,7 @@
                   </a>
                 </li>
                 <li class>
-                  <a class="nav-link py-0 px-4 top-link" href="./comingsoon.html" target="_blank">
+                  <a class="nav-link py-0 px-4 top-link" href="./faculty.html" target="_blank">
                     Faculty & Staff
                   </a>
                 </li>
@@ -362,7 +362,7 @@
                   <div class="subnav-content">
                     <ul class="list-unstyled subnav-unit-wrap">
                       <li class="subnav-unit dropdown-submenu">
-                        <a class="subnav-link text-uppercase" href="comingsoon.html" target="_blank">
+                        <a class="subnav-link text-uppercase" href="research_facilities1.html" target="_blank">
                           <span>Research Facilities</span>
                         </a>
                       </li>
@@ -528,7 +528,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="./comingsoon.html" target="_blank">Faculty & staff</a>
+              <a class="nav-link" href="./faculty.html" target="_blank">Faculty & staff</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://alumni.charusat.ac.in/">Alumni</a>
@@ -586,7 +586,7 @@
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="JavaScript:Void(0);"
                 target="research-dropdown">Research</a>
               <div class="dropdown-menu" id="research-dropdown">
-                <a class="dropdown-item" href="./comingsoon.html">Research Facilities</a>
+                <a class="dropdown-item" href="./research_facilities1.html">Research Facilities</a>
                 <a class="dropdown-item" href="./research_project.html">Research Projects</a>
               </div>
             <li class="nav-item dropdown">
@@ -707,7 +707,13 @@
 
     </div>
     <!-- carosal end-->
+
+    
+
   </section>
+  
+  
+
   <div class="modal" id="aboutUsModal">
     <div class="modal-content">
       <span class="close-btn" id="closeModal">&times;</span>
@@ -752,6 +758,10 @@
             <h3>NBA Accreditation</h3>
           </li>
           <li class="timeline-item">
+            <div class="year">2016</div>
+            <h3>NBA Accreditation</h3>
+          </li>
+          <li class="timeline-item">
             <div class="year">2017</div>
             <h3>Environment Auditor Recognition</h3>
           </li>
@@ -776,6 +786,10 @@
             <div class="year">2023</div>
             <h3>NABL Accredited Laboratory</h3>
           </li>
+          <li class="timeline-item">
+            <div class="year">2024</div>
+            <h3>GSIRF: 5-Star</h3>
+          </li>
         </ul>
 
       </div>
@@ -797,6 +811,11 @@
       aboutUsModal.style.display = "none";
     });
 
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" || event.key === "Esc") {
+        aboutUsModal.style.display = "none";
+      }
+    });
     // Close modal when clicking outside the content
     window.addEventListener("click", (event) => {
       if (event.target === aboutUsModal) {
@@ -854,7 +873,7 @@
               <div class="card h-100">
                 <img src="images1/programs/programs-20.webp" class="card-img-top" alt="B.Tech in Computer Science"
                   loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title">Computer Science & Engineering</h5>
                 </div>
               </div>
@@ -867,7 +886,7 @@
               <div class="card h-100">
                 <img src="images1/ec.avif" class="card-img-top" alt="B.Tech in Electronics Engineering"
                   loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title">Electronics & Communication Engineering</h5>
                 </div>
               </div>
@@ -880,7 +899,7 @@
               <div class="card h-100">
                 <img src="images1/programs/programs-7.webp" class="card-img-top" alt="B.Tech in Information Technology"
                   loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title">Information Technology</h5>
                 </div>
               </div>
@@ -893,7 +912,7 @@
               <div class="card h-100">
                 <img src="images1/programs/programs-2.webp" class="card-img-top" alt="B.Tech in Civil Engineering"
                   loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title">Civil Engineering</h5>
                 </div>
               </div>
@@ -906,7 +925,7 @@
               <div class="card h-100">
                 <img src="images1/programs/programs-8.webp" class="card-img-top" alt="B.Tech in Computer Engineering"
                   loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title">Computer Engineering</h5>
                 </div>
               </div>
@@ -919,7 +938,7 @@
               <div class="card h-100">
                 <img src="images1/programs/programs-3.webp" class="card-img-top" alt="B.Tech in Mechanical Engineering"
                   loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title">Mechanical Engineering</h5>
                 </div>
               </div>
@@ -932,7 +951,7 @@
               <div class="card h-100">
                 <img src="images1/programs/aiml.webp" class="card-img-top"
                   alt="B.Tech in Artificial Intelligence and Machine Learning" loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title">
                     Artificial Intelligence and Machine Learning
                   </h5>
@@ -947,7 +966,7 @@
               <div class="card h-100">
                 <img src="images1/programs/electrical.webp" class="card-img-top" alt="B.Tech in Electrical Engineering"
                   loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title" id="post-graduate-programs">Electrical Engineering</h5>
                 </div>
               </div>
@@ -968,7 +987,7 @@
               <div class="card h-100">
                 <img src="images1/programs/programs-9.webp" class="card-img-top"
                   alt="M.Tech in Advanced Manufacturing Technology" loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title">
                     Advanced Manufacturing Technology
                   </h5>
@@ -983,7 +1002,7 @@
               <div class="card h-100">
                 <img src="images1/programs/programs-8.webp" class="card-img-top" alt="M.Tech in Computer Engineering"
                   loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title">Computer Engineering</h5>
                 </div>
               </div>
@@ -996,7 +1015,7 @@
               <div class="card h-100">
                 <img src="images1/programs/programs-2.webp" class="card-img-top" alt="M.Tech in Structural Engineering"
                   loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title">Structural Engineering</h5>
                 </div>
               </div>
@@ -1009,7 +1028,7 @@
               <div class="card h-100">
                 <img src="images1/programs/programs-11.webp" class="card-img-top" alt="M.Tech in Thermal Engineering"
                   loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title">Thermal Engineering</h5>
                 </div>
               </div>
@@ -1021,7 +1040,7 @@
             <a href="https://www.charusat.ac.in/course-single#PGDEAMT" class="card-link" target="_blank">
               <div class="card h-100">
                 <img src="images1/programs/programs-10.webp" class="card-img-top" alt="PGDEAMT" loading="lazy" />
-                <div class="card-body">
+                <div class="program-card-body">
                   <h5 class="card-title">PGDEAMT</h5>
                 </div>
               </div>
@@ -2026,7 +2045,7 @@
                 <div class="student-small-card" onclick="openProjectPopup('project7')">
                   <img src="images1/Projects/Warehouse_2.webp" alt="Warehouse" class="student-image" loading="lazy" />
                   <div class="project-hover-overlay">
-                    <p class="project-hover-text"><a  onclick="openProjectPopup('project7')">Know Here</a></p>
+                    <p class="project-hover-text"><a  onclick="openProjectPopup('project7')">Know More</a></p>
                   </div>
                   <div class="student-card-text">
                     <p>Warehouse Mobility System</p>
@@ -2935,7 +2954,16 @@ function createTestimonialCard(testimonial) {
     });
   </script>
 
-  <br /><br />
+  <br />
+  <!-- community slider  start -->
+  <div id="gen-sdk" class="gen-sdk-class" style="width: 100vw; height: 600px; background: #efefef"></div> 
+  <script src="https://media.begenuin.com/sdk/gen_sdk.min.js"></script> 
+  <script> 
+    window.onGenuinReady = (genuin) => { genuin.initialize({ embed_id: '6798a8070b873b64c979eef7', api_key: '4a1f34a0cb8c1cc32d237e2f0d57d372907af96fc5dd8bc8', }) } 
+   </script>
+
+   <!-- community slider  end -->
+  <br/>
   <!-- footer -->
   <footer class="footer-bs text-white container-fluid pt-40 pb-0 footer_bottom_bg">
     <div class="container-custom mx-auto">
